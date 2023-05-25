@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuizMe</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <div class="quiz-container">
+      <h1>Quiz Me</h1>
+      <hr />
+      <!-- Info box-->
+      <div class="start-box">
+        <div class="info-title">
+          <span>Rule-Check</span>
+          <div class="info-list">
+            <div class="info">
+              You will have 30 second to answer as many questions as you can.
+            </div>
+            <div class="info">
+              Careful! If you get a question wrong then your time will run out
+              faster.
+            </div>
+            <div class="info">When the time is up, the game will be over.</div>
+            <div class="info">Good Luck!</div>
+          </div>
+        </div>
+        <button id="start-btn">Start</button>
+      </div>
+
+      <!-- Questions Box -->
+      <div class="countdown-container">
+        <div class="header">
+          <div class="questions-answered">
+            <span class="number-of-questions">1 of 15 questions</span>
+          <div class="timer">
+            <span class="time-left">30s</span>
+          </div>
+        </div>
+      </div>
+      <div id="quiz-box">
+        <!-- questions and options go here -->
+
+        
+      </div>
+    </div>
+      <div class="score-container">
+        <div id="user-score">demo score</div>
+        <button id="restart">Try Again</button>
+      </div>
+
+    <script src="assets/script.js"></script>
+  </body>
+</html>
