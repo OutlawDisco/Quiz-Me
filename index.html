@@ -5,17 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>QuizMe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Montserrat:wght@500&family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="assets/styles.css" />
   </head>
   <body>
     <div class="quiz-container">
-      <h1>Quiz Me</h1>
+      <h1>Quiz Me Down to Fraggle Rock</h1>
       <hr />
       <!-- Info box-->
       <div class="start-box">
         <div class="info-title">
           <span>Rule-Check</span>
           <div class="info-list">
+            <div class="info">Welcome to your Fraggle Rock Quiz!</div>
             <div class="info">
               You will have 30 second to answer as many questions as you can.
             </div>
@@ -34,22 +41,30 @@
       <div class="countdown-container">
         <div class="header">
           <div class="questions-answered">
-            <span class="number-of-questions">1 of 15 questions</span>
-          <div class="timer">
-            <span class="time-left">30s</span>
+            <div class="left">
+              <span class="number-of-questions">1 of 8 questions</span>
+            </div>
+            <div class="timer">
+              <span class="time-left">30s</span>
+            </div>
           </div>
         </div>
-      </div>
-      <div id="quiz-box">
-        <!-- questions and options go here -->
-
-        
+        <div id="quiz-box">
+          <h2 id="question">Quiz question goes here</h2>
+          <div id="answer">
+            <button class="btn">Answer1</button>
+            <button class="btn">Answer2</button>
+            <button class="btn">Answer3</button>
+            <button class="btn">Answer4</button>
+          </div>
+          <!-- questions and options go here -->
+        </div>
       </div>
     </div>
-      <div class="score-container">
-        <div id="user-score">demo score</div>
-        <button id="restart">Try Again</button>
-      </div>
+    <div class="score-container hide">
+      <div id="user-score">demo score</div>
+      <button id="restart">Try Again</button>
+    </div>
 
     <script src="assets/script.js"></script>
   </body>
