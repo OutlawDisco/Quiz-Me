@@ -37,6 +37,24 @@ const resultBox = document.querySelector(".result_box");
 const reQuiz = resultBox.querySelector(".buttons .restart");
 const quitQuiz = resultBox.querySelector(".buttons .quit");
 
+reQuiz.onclick = () => {
+  quizBox.classList.add("activeQuiz");
+  resultBox.classList.remove("activeResult");
+  let queCount = 0;
+  let queNumb = 1;
+  let timerValue = 30;
+  let userScore = 0;
+  showQuestions(queCount);
+  queCounter(queNumb);
+  clearInterval(counter);
+  startTimer(timerValue);
+  nextBtn.style.display = "none";
+};
+
+quitQuiz.onclick = () => {
+  window.location.reload();
+};
+
 nextBtn.onclick = () => {
   if (queCount < questions.length - 1) {
     queCount++;
@@ -84,7 +102,6 @@ function optionSelected(answer) {
   let userAnswer = answer.textContent;
   let correctAnswer = questions[queCount].answer;
   let allOptions = optionList.children.length;
-
   if (userAnswer == correctAnswer) {
     userScore += 1;
     answer.classList.add("correct");
@@ -92,7 +109,7 @@ function optionSelected(answer) {
   } else {
     answer.classList.add("wrong");
     console.log("wrong!");
-
+    // if answer is incorrect, show correct answer
     for (let i = 0; i < allOptions; i++) {
       if (optionList.children[i].textContent == correctAnswer) {
         optionList.children[i].setAttribute("class", "option correct");
@@ -106,40 +123,28 @@ function optionSelected(answer) {
   nextBtn.style.display = "block";
 }
 
-function queCounter(index) {
-  const btmCounter = quizBox.querySelector(".total_questions");
-  let totalQuesCountTag =
-    "<span><p>" + index + "</p>of<p>" + questions.length + "</p></span>";
-  btmCounter.innerHTML = totalQuesCountTag;
-}
-
 function showResults() {
   infoBox.classList.remove("activeInfo"); //hide info box
   quizBox.classList.remove("activeQuiz"); //hide Quiz Box
   resultBox.classList.add("activeResult"); //Show results Box
   const scoreText = resultBox.querySelector(".score_text");
-  if (userScore > 3) {
+  if (userScore > 5) {
+    let scoreTag =
+      "<span>Yay! You got <p>" +
+      userScore +
+      "</p> out of <p>" +
+      questions.length +
+      "</p> correct!</span>";
+    scoreText.innerHTML = scoreTag;
+  } else if (userScore > 1) {
     let scoreTag =
       "<span>You got <p>" +
       userScore +
       "</p> out of <p>" +
       questions.length +
       "</p> correct!</span>";
-    scoreTag.innerHTML = scoreTag;
-  } else if (userScore > 1){
-    let scoreTag = "<span>You got <p>" +
-    userScore +
-    "</p> out of <p>" +
-    questions.length +
-    "</p> correct!</span>";
-  scoreTag.innerHTML = scoreTag;
-  } else(userScore > 1){
-    let scoreTag = "<span>You got only <p>" +
-    userScore +
-    "</p> out of <p>" +
-    questions.length +
-    "</p> correct!</span>";
-  scoreTag.innerHTML = scoreTag;
+    scoreText.innerHTML = scoreTag;
+  }
 }
 
 function startTimer(time) {
@@ -147,9 +152,33 @@ function startTimer(time) {
   function timer() {
     timeCount.textContent = time;
     time--;
+    if (time < 9) {
+      let addZero = timeCount.textContent;
+      timeCount.textContent = "0" + addZero;
+    }
     if (time < 0) {
       clearInterval(counter);
       timeCount.textContent = "00";
-    };
+
+      let correctAnswer = questions[queCount].answer;
+      let allOptions = optionList.children.length;
+
+      for (let i = 0; i < allOptions; i++) {
+        if (optionList.children[i].textContent == correctAnswer) {
+          optionList.children[i].setAttribute("class", "option correct");
+        }
+      }
+      for (let i = 0; i < allOptions; i++) {
+        optionList.children[i].classList.add("disabled");
+      }
+      nextBtn.style.display = "block";
+    }
   }
+}
+
+function queCounter(index) {
+  const btmCounter = quizBox.querySelector(".total_questions");
+  let totalQuesCountTag =
+    "<span><p>" + index + "</p>of<p>" + questions.length + "</p></span>";
+  btmCounter.innerHTML = totalQuesCountTag;
 }
