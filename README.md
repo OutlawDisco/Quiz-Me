@@ -1,7 +1,52 @@
 # Quiz-Me
 
-AS A coding boot camp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
-SO THAT I can gauge my progress compared to my peers
+By OutlawDisco
+email:aoutlaw@gmail.com
 
-Unfortunatley have still have much to learn and have only managed to meet a small fraction of the required acceptance criteria. As you can see, i was able to constuct the html and css but the script.js is still lacking. I have chosen to submit what I have in order to meet the deadline, at least.
+## Description
+
+A timed Quiz that tests the users Fraggle rock knowledge.
+
+## Usage
+
+Once the user clicks start, the information box is displayed, listing the rules and the option to continue or quit. If the user chooses to continue, the quiz box is displayed and the timer starts the countdown. Every wrong answer subtracts three seconds from the quiz timer. Once the game is complete, the user has the option to try again or quit. If the user chooses to quit they retunr to the start screen. If the user decides to try again, the quiz box is displayed and the timer starts the countdown.
+
+screenshot of quiz
+\assets\2023-07-10 (2).png
+
+github repo link
+https://github.com/OutlawDisco/Quiz-Me
+
+## Credits
+
+## License
+
+MIT License
+
+Copyright (c) [year] [fullname]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+## How to Contribute
+
+please dont
+
+## Tests
+
+none
