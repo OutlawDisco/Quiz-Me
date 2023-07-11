@@ -17,6 +17,9 @@ screenshot of quiz
 github repo link
 https://github.com/OutlawDisco/Quiz-Me
 
+github deployed page link
+https://outlawdisco.github.io/Quiz-Me/
+
 ## Credits
 
 ## License
