@@ -6,6 +6,7 @@ const continueBtn = infoBox.querySelector(".buttons .restart");
 const quizBox = document.querySelector(".quiz_box");
 const optionList = document.querySelector(".option_list");
 const timeCount = quizBox.querySelector(".timer .timer_sec");
+let time = 30;
 
 //If start button is clicked
 startBtn.onclick = () => {
@@ -23,13 +24,12 @@ continueBtn.onclick = () => {
   quizBox.classList.add("activeQuiz"); //Show Quiz Box
   showQuestions(0);
   queCounter(1);
-  startTimer(30);
+  startTimer();
 };
 
 let queCount = 0;
 let queNumb = 1;
 let counter;
-let timerValue = 30;
 let userScore = 0;
 
 const nextBtn = quizBox.querySelector(".next_btn");
@@ -40,14 +40,14 @@ const quitQuiz = resultBox.querySelector(".buttons .quit");
 reQuiz.onclick = () => {
   quizBox.classList.add("activeQuiz");
   resultBox.classList.remove("activeResult");
-  let queCount = 0;
-  let queNumb = 1;
-  let timerValue = 30;
-  let userScore = 0;
+  queCount = 0;
+  queNumb = 1;
+  userScore = 0;
+  time = 30;
   showQuestions(queCount);
   queCounter(queNumb);
   clearInterval(counter);
-  startTimer(timerValue);
+  startTimer();
   nextBtn.style.display = "none";
 };
 
@@ -108,6 +108,7 @@ function optionSelected(answer) {
     console.log("Answer is correct");
   } else {
     answer.classList.add("wrong");
+    time -= 3;
     console.log("wrong!");
     // if answer is incorrect, show correct answer
     for (let i = 0; i < allOptions; i++) {
@@ -147,7 +148,7 @@ function showResults() {
   }
 }
 
-function startTimer(time) {
+function startTimer() {
   counter = setInterval(timer, 1000);
   function timer() {
     timeCount.textContent = time;
