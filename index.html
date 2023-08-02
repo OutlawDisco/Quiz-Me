@@ -13,44 +13,51 @@
     />
     <link rel="stylesheet" href="assets/styles.css" />
   </head>
+
   <body>
-      <h1>Quiz Me Down to Fraggle Rock</h1>
-      <!-- Start quiz button -->
-      <div class = "start_btn"><button>Start</button></div>
+    <h1>Quiz Me Down to Fraggle Rock</h1>
+    <!-- Start quiz button -->
+    <div class="start_btn"><button>Start</button></div>
 
-      <!-- Info Box -->
-      <div class = "info_box">
-        <div class = "info_title">
-          <span> Welcome to your Fraggle Rock Quiz!</span>
-        </div>
-        <div class="info_list">
-          <div class="info">I. You will have <span>30 seconds</span> to answer as many questions as you can. </div>
-          <div class="info">II. Careful! If you get a question wrong then your time will run out faster.</div>
-          <div class="info">III. When the time is up, the game will be over.</div>
-          <div class="info">Good luck!</div>
-          </div>
-          <div class="buttons">
-            <button class="quit">No Thanks</button>
-            <button class="restart">Lets Go!</button>
-          </div>
-        </div>
+    <!-- Info Box -->
+    <div class="info_box">
+      <div class="info_title">
+        <span> Welcome to your Fraggle Rock Quiz!</span>
       </div>
+      <div class="info_list">
+        <div class="info">
+          I. You will have <span>30 seconds</span> to answer as many questions
+          as you can.
+        </div>
+        <div class="info">
+          II. Careful! If you get a question wrong then your time will run out
+          faster.
+        </div>
+        <div class="info">III. When the time is up, the game will be over.</div>
+        <div class="info">Good luck!</div>
+      </div>
+      <div class="buttons">
+        <button class="quit">No Thanks</button>
+        <button class="restart">Lets Go!</button>
+      </div>
+    </div>
+    <!-- </div> -->
 
-      <!-- Quiz Box -->
-      <div class="quiz_box">
-        <header>
-          <div class="title">Dance your cares away...</div>
-          <div class="timer">
-            <div class="time_text"> time remaining</div>
-            <div class="timer_sec">30</div>
-          </div>
-        </header>
-        <section>
-          <div class="question_text">
-            <!-- WHO is NOT a Fraggle? -->
-          </div>
-          <div class="option_list">
-            <!-- <div class="option">
+    <!-- Quiz Box -->
+    <div class="quiz_box">
+      <header>
+        <div class="title">Dance your cares away...</div>
+        <div class="timer">
+          <div class="time_text">time remaining</div>
+          <div class="timer_sec">30</div>
+        </div>
+      </header>
+      <section>
+        <div class="question_text">
+          <!-- WHO is NOT a Fraggle? -->
+        </div>
+        <div class="option_list">
+          <!-- <div class="option">
               <span>a. Gobo</span>
             </div>
             <div class="option">
@@ -65,29 +72,32 @@
             <div class="option">
               <span>e. Gorg</span>
             </div> -->
-          </div>
-        </section>
-        <footer>
-          <div class="total_questions">
-            <span><p>1</p>of<p>8</p></span>
-          </div>
-          <button class="next_btn">Next</button>
-        </footer>
-        
-      </div>
+        </div>
+      </section>
+      <footer>
+        <div class="total_questions">
+          <span>
+            <p>1</p>
+            of
+            <p>8</p>
+          </span>
+        </div>
+        <button class="next_btn">Next</button>
+      </footer>
+    </div>
 
-      <!-- Result Box -->
-      <div class="result_box">
-        <div class="complete_text">...worry's for another day!</div>
-        <div class="score_text">
-          <!-- <span>You got <p>1</p> out of <p>6</p> correct!</span> -->
-        </div>
-        <div class="buttons">
-          <button class="restart">Try Again</button>
-          <button class="quit">No Thanks!</button>
-        </div>
+    <!-- Result Box -->
+    <div class="result_box">
+      <div class="complete_text">...worry's for another day!</div>
+      <div class="score_text">
+        <!-- <span>You got <p>1</p> out of <p>6</p> correct!</span> -->
       </div>
-    <script src="/assets/script.js"></script>
-    <script src= "/assets/questions.js"></script>
+      <div class="buttons">
+        <button class="restart">Try Again</button>
+        <button class="quit">No Thanks!</button>
+      </div>
+    </div>
+    <script src="./assets/questions.js"></script>
+    <script src="./assets/script.js"></script>
   </body>
 </html>
