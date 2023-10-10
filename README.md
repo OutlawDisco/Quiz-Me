@@ -12,7 +12,7 @@ A timed Quiz that tests the users Fraggle rock knowledge.
 Once the user clicks start, the information box is displayed, listing the rules and the option to continue or quit. If the user chooses to continue, the quiz box is displayed and the timer starts the countdown. Every wrong answer subtracts three seconds from the quiz timer. Once the game is complete, the user has the option to try again or quit. If the user chooses to quit they retunr to the start screen. If the user decides to try again, the quiz box is displayed and the timer starts the countdown.
 
 screenshot of quiz
-\assets\2023-07-10 (2).png
+![screenshot](<./assets/2023-07-10%20(2).png>).
 
 github repo link
 https://github.com/OutlawDisco/Quiz-Me
